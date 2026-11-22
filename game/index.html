@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Clean Minute — a heist game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0b0f;
+    color: #f1f5f9;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  #game {
+    display: block;
+    width: 960px;
+    height: 656px;
+    background: #17171d;
+    border: 2px solid #3a3a46;
+    border-radius: 8px;
+    cursor: crosshair;
+    image-rendering: pixelated;
+  }
+  .help {
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 960px;
+  }
+  .help b { color: #f1f5f9; }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div class="help">
+  <b>One Clean Minute</b> — Wren has one clean minute per room.
+  Grab the pink jewel, then reach the green exit before the alarm fills.
+  <br>WASD / arrows to move · Shift to run (loud) · Click to toss a coin (distracts guards, blinds cameras) ·
+  Hide in green planters · M to mute · R to retry.
+</div>
+<script src="src/config.js"></script>
+<script src="src/levels.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/guards.js"></script>
+<script src="src/cameras.js"></script>
+<script src="src/player.js"></script>
+<script src="src/render.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
